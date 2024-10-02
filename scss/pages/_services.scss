@@ -1,0 +1,22 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.ourServices{
+    &__wrapper {
+        @include unevenGrid(25rem 25rem 25rem, 3rem);
+        place-content: center;
+        grid-template-columns: 1fr;
+    }
+    .title{
+        padding: 2rem;
+        font-size: 1.2rem;
+        font-family: "Ubuntu", Arial, sans-serif;
+        margin: 3rem;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+    }
+    img {
+        width: 10rem;
+    }
+
+
+}
