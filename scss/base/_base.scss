@@ -2,8 +2,8 @@
 @use "./typography" as *;
 
 body {
-  color: $clr--light;
-  font-family: $font--primary;
+  background-color: $clr--dark;
+  font-family: $font-primary;
   font-size: 2rem;
   overflow-x: hidden;
   line-height: 1.4;
@@ -68,7 +68,7 @@ thead,
 tr,
 th,
 td {
-  font-family: $font--primary;
+  font-family: $font-primary;
   border: 0;
   font-size: 100%;
   margin: 0;
@@ -107,9 +107,3 @@ img {
   margin: 0 auto;
   padding: 0 5rem;
 }
-
-$clr--dark: #26252a;
-$clr--light: #fff;
-$clr--primary: #3e3e43;
-$clr--secondary: #f8565d;
-$clr--footer: #89888c;
