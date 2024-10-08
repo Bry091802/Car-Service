@@ -1469,6 +1469,11 @@ img {
   border-bottom: unset;
 }
 
+@media screen and (max-width: 520px) {
+  .cta .container {
+    padding: 0rem;
+  }
+}
 .cta__wrapper {
   padding: 4rem;
 }
@@ -1476,6 +1481,11 @@ img {
   line-height: 6rem;
   font-size: 6.5rem;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .cta__wrapper h1 {
+    font-size: 4rem;
+  }
 }
 .cta__button {
   margin-left: -3rem;
