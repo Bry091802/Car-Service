@@ -1,0 +1,31 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+
+  &.bg--project {
+    display: inline-block;
+    margin: 3rem;
+    padding: .5rem 2rem;
+    color: $clr--light;
+    background-color: $clr--secondary;
+    font-family: $font-secondary;
+    font-size: 1.3rem;
+  }
+
+  &.bg--cta {
+    display: inline-block;
+    margin: 3rem;
+    padding: 1.5rem 2rem;
+    color: $clr--light;
+    background-color: $clr--secondary;
+    font-family: $font-secondary;
+    font-size: 1.3rem;
+  }
+
+  
+}

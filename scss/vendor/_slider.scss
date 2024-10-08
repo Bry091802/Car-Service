@@ -1,0 +1,90 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.homeBanner .tns-outer {
+  position: relative;
+  & > button {
+    display: none;
+  }
+}
+.homeBanner .tns-nav {
+  @include mediaQuery(520px) {
+    position: absolute;
+    top: 60%;
+    right: 1.5%;
+  }
+  position: absolute;
+  text-align: end;
+  top: 55%;
+  right: 29%;
+  button {
+    @include mediaQuery(520px) {
+      margin: 2rem 0.1rem;
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+    margin: 2rem 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+    background-color: $clr--dark;
+  }
+  &-active {
+    z-index: 99;
+    background-color: $clr--light !important;
+  }
+}
+.services .tns-nav {
+  display: none;
+}
+
+.services #controls {
+  position: absolute;
+}
+
+.services .prev {
+  @include mediaQuery(520px) {
+    position: relative;
+    left: 25.5rem;
+    bottom: 25rem;
+    font-size: 1.5rem;
+  }
+  color: $clr--light;
+  font-size: 2rem;
+  position: relative;
+  bottom: 26.5rem;
+  left: 82rem;
+
+  &:hover {
+    color: $clr--dark;
+  }
+}
+
+.services .next {
+  @extend .prev;
+}
+
+.serviceBanner .tns-nav {
+  display: none;
+}
+
+.serviceBanner #controls {
+  position: absolute;
+}
+
+.serviceBanner .prev {
+  color: $clr--light;
+  font-size: 2rem;
+  position: relative;
+  bottom: 53.5rem;
+  left: 82rem;
+
+  &:hover {
+    color: $clr--dark;
+  }
+}
+
+.serviceBanner .next {
+  @extend .prev;
+}

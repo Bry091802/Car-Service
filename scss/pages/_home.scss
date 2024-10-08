@@ -1,0 +1,254 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.homeBanner {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__car {
+    position: relative;
+    h2 {
+      @include mediaQuery(520px) {
+        position: absolute;
+        font-size: 1.1rem;
+        max-width: 8rem;
+        text-align: end;
+        top: 45%;
+        right: 2%;
+      }
+      position: absolute;
+      top: 35%;
+      right: 15%;
+      font-size: 2.5rem;
+      max-width: 18rem;
+    }
+  }
+}
+
+.project {
+  @include mediaQuery(520px) {
+    background-color: $clr--primary;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__card {
+    @include centerAll;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    span {
+      position: absolute;
+      background-color: #343438;
+      width: 20rem;
+      height: 33rem;
+      opacity: 0;
+      scale: 0;
+    }
+    &:hover {
+      z-index: 999;
+      transition: 0.5s all ease;
+      .project__card--title {
+        z-index: 999;
+      }
+      .project__card--txt {
+        z-index: 99;
+        i {
+          color: $clr--secondary;
+        }
+        .btn {
+          background-color: $clr--light;
+          color: $clr--dark;
+          transition: 0.3s all ease-in;
+        }
+      }
+      span {
+        transition: 0.5s all ease;
+        opacity: 100;
+        scale: 1;
+      }
+    }
+  }
+  &__card--title {
+    font-size: 1.5rem;
+    h3 {
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 4px solid $clr--footer;
+    }
+  }
+  &__card--txt {
+    i {
+      font-size: 3rem;
+      margin-top: 2.5rem;
+    }
+    p {
+      max-width: 20rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.services {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
+  @include mediaQuery(520px) {
+    padding: 1rem 0;
+  }
+  padding: 0.5rem 9rem;
+  &__wrapper {
+    padding: 3rem 4rem;
+    h2 {
+      position: relative;
+      font-size: 2.5rem;
+      font-family: $font-secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $clr--light;
+    }
+  }
+  &__card {
+    @include mediaQuery(520px) {
+      width: 10rem;
+    }
+    margin-top: 2rem;
+  }
+  &__card--image {
+    img {
+      @include mediaQuery(520px) {
+        height: 5rem;
+      }
+      width: 29rem;
+      height: 12rem;
+      object-fit: cover;
+    }
+  }
+  &__card--txt {
+    p {
+      @include mediaQuery(520px) {
+        width: 11rem;
+      }
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      width: 25rem;
+    }
+  }
+}
+
+.question {
+  @include mediaQuery(520px) {
+    padding: 1rem 0;
+  }
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
+  &__wrapper {
+    padding: 5rem;
+    display: flex;
+    gap: 2rem;
+    @include mediaQuery(520px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 5rem 2rem;
+    }
+  }
+  &__card {
+    max-width: 37rem;
+    h2 {
+      @include mediaQuery(520px) {
+        width: 28rem;
+      }
+      font-size: 2.5rem;
+      color: $clr--dark;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    p {
+      @include mediaQuery(520px) {
+        width: 28rem;
+        line-height: 1.5rem;
+      }
+      padding-bottom: 1rem;
+      line-height: 1.6rem;
+      width: 37rem;
+      color: $clr--dark;
+      margin-top: 2rem;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    }
+    p:last-child {
+      @extend p;
+      border-bottom: unset;
+    }
+  }
+  &__card2 {
+    max-width: 37rem;
+
+    h2 {
+      @include mediaQuery(520px) {
+        width: 28rem;
+      }
+      font-size: 2.5rem;
+      color: $clr--dark;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    p {
+      @include mediaQuery(520px) {
+        width: 26rem;
+      }
+      padding-bottom: 1rem;
+      line-height: 1.6rem;
+      width: 37rem;
+      color: $clr--dark;
+      margin-top: 1rem;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    }
+    p:nth-child(2) {
+      font-size: small;
+      color: $clr--secondary;
+    }
+
+    p:last-child {
+      @extend p;
+      border-bottom: unset;
+    }
+  }
+}
+
+.cta {
+  &__wrapper {
+    padding: 4rem;
+    h1 {
+      line-height: 6rem;
+      font-size: 6.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__button {
+    margin-left: -3rem;
+    .btn {
+      &:hover {
+        background-color: $clr--light;
+        color: $clr--dark;
+        transition: 0.3s all ease-in;
+      }
+    }
+    i {
+      margin-left: -2rem;
+      font-size: 2.5rem;
+    }
+  }
+}

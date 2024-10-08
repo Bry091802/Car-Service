@@ -1,0 +1,128 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.aboutBanner {
+  &__wrapper {
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font-secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+  &__card {
+    @include evenGrid(4, 3rem);
+  }
+
+  &__feature {
+    @include centerAll;
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+    &--title {
+      h3 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+      }
+    }
+    &--txt {
+      p {
+        max-width: 20rem;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .btn {
+        &:hover {
+          color: $clr--dark;
+          background-color: $clr--light;
+          transition: 0.3s all ease-in;
+        }
+      }
+    }
+  }
+}
+
+.history {
+  padding: 2rem 9rem;
+  &__wrapper {
+    display: flex;
+    gap: 3rem;
+  }
+  &__card {
+    max-width: 53.5rem;
+  }
+  &__title {
+    margin-bottom: 3rem;
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font-secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+  }
+  &__txt {
+    width: 53rem;
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__card1 {
+    max-width: 25.5rem;
+  }
+  &__txt1 {
+    width: 25rem;
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      a {
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+          color: $clr--dark;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  h2 {
+    color: $clr--dark;
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+  }
+  &__wrapper--card {
+    @include evenGrid(4, 2rem);
+  }
+  &__card--img {
+    img {
+      width: 18rem;
+      height: 12rem;
+    }
+  }
+  &__card--txt {
+    margin-top: 2rem;
+    a {
+      color: $clr--secondary;
+      font-size: small;
+      &:hover {
+        color: $clr--dark;
+      }
+    }
+    p {
+      color: $clr--dark;
+      width: 18rem;
+      a {
+        color: $clr--dark;
+        text-decoration: underline;
+        font-size: 1rem;
+        &:hover {
+          color: $clr--secondary;
+        }
+      }
+    }
+  }
+}
