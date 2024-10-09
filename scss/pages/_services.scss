@@ -1,22 +1,146 @@
 @use "../abstract/" as *;
 @use "../base/" as *;
 
-.ourServices{
-    &__wrapper {
-        @include unevenGrid(25rem 25rem 25rem, 3rem);
-        place-content: center;
-        grid-template-columns: 1fr;
+.serviceBanner {
+  &__wrapper {
+    padding: 5rem 4rem;
+    h2 {
+      position: relative;
+      font-size: 2.5rem;
+      font-family: $font-secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $clr--light;
     }
-    .title{
-        padding: 2rem;
-        font-size: 1.2rem;
-        font-family: "Ubuntu", Arial, sans-serif;
-        margin: 3rem;
-        border-bottom: 1px solid rgb(0, 0, 0, 0.4);
-    }
+  }
+  &__slider {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  &__card--img {
     img {
-        width: 10rem;
+      width: 25rem;
+      height: 10rem;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+  }
+  &__card--txt {
+    a {
+      font-size: small;
+      color: $clr--secondary;
+      &:hover{
+        color: $clr--dark;
+        transition: 0.2s all ease-in;
+      }
     }
 
+    p {
+      font-size: 0.9rem;
+      width: 24rem;
+      margin-bottom: 3rem;
+      margin-top: .5rem;
+      a {
+        color: $clr--light;
+        text-decoration: underline;
+        &:hover {
+          color: $clr--secondary;
+        }
+      }
+    }
+  }
+}
 
+.Price {
+  padding-bottom: 2rem;
+  h2 {
+    position: relative;
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: $clr--dark;
+  }
+  &__left {
+    a {
+      padding-bottom: 1.5rem;
+      font-size: 13px;
+      color: $clr--secondary;
+      font-family: $font-primary;
+      display: block;
+      line-height: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      margin-top: 3rem;
+      width: 23.5rem;
+      &:hover {
+        color: $clr--dark;
+      }
+    }
+    em {
+      background: url(/img/ellipsis.png) repeat-x 0% 13px;
+      display: block;
+      overflow: hidden;
+    }
+  }
+  &__right {
+    h2 {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      margin-bottom: 3rem;
+    }
+    a {
+      margin-top: 0.8rem;
+      font-size: 13px;
+      color: $clr--dark;
+      font-family: $font-primary;
+      display: block;
+      line-height: 1rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+    p {
+      width: 49rem;
+      text-align: justify;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    color: $clr--dark;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+  }
+  &__wrapper {
+    padding: 6rem 7rem;
+    background-color: $clr--light;
+    @include unevenGrid(1fr 2fr, 2rem);
+  }
+  &__lists {
+    margin-right: 5rem;
+    display: flex;
+    gap: 5rem;
+    color: $clr--dark;
+    em {
+      background: url(../../img/elipsis.gif) repeat-x 0% 13px;
+      display: block;
+      overflow: hidden;
+    }
+    a {
+      font-size: 15px;
+      width: 12.8rem;
+      float: left;
+      font-family: $clr--secondary;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+  }
+  &__col {
+    margin-top: 1rem;
+    ul li {
+      padding-bottom: 1.5rem;
+    }
+  }
 }

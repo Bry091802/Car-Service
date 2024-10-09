@@ -1,19 +1,12 @@
 var slider = tns({
-    container: ".ourServices__slider",
-    items: 3,
-    speed: 200,
-    gutter: 100,
-    autoplay: true,
-    navPosition: "button",
-    containerControls: "#controls",
-    prevButton: ".prev",
-    nextButton: ".next",
-    responsive: {
-        1250: {
-            items: 3,
-        },
-        200: {
-            items: 1,
-        },
-    },
+  container: ".homeBanner__slider",
+  autoHeight: true,
+  items: 1,
+  speed: 300,
+  slideBy: "page",
+  autoplay: true,
+  navPosition: "bottom",
+  controls: false,
+  axis: "vertical",
+
 });

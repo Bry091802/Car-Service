@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 @use "../abstract/"as *;
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 @import url(//fonts.googleapis.com/css?family=Ubuntu+Condensed);
 @import url(//fonts.googleapis.com/css?family=Raleway:400,300);
+=======
+@use "../abstract/" as *;
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,300);
+
+$font-primary: "Ubuntu", Arial, sans-serif;
+$font-secondary: "Ubuntu Condensed", Arial, sans-serif;
+$font-tertiary: "Raleway", Arial, sans-serif;
+>>>>>>> Maligaya
 
 $font-primary: "Ubuntu", Arial, sans-serif;
 $font-secondary: "Ubuntu Condensed", Arial, sans-serif;

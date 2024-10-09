@@ -2,8 +2,9 @@
 @use "./typography" as *;
 
 body {
+  background-color: $clr--dark;
   color: $clr--light;
-  font-family: $font--primary;
+  font-family: $font-primary;
   font-size: 2rem;
   overflow-x: hidden;
   line-height: 1.4;
@@ -73,7 +74,7 @@ thead,
 tr,
 th,
 td {
-  font-family: $font--primary;
+  font-family: $font-primary;
   border: 0;
   font-size: 100%;
   margin: 0;
