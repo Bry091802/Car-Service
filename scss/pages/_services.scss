@@ -2,6 +2,11 @@
 @use "../base/" as *;
 
 .serviceBanner {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem;
+    }
+  }
   &__wrapper {
     padding: 5rem 4rem;
     h2 {
@@ -16,9 +21,18 @@
     display: flex;
     margin-top: 2rem;
   }
+  &__card1 {
+    @include mediaQuery(520px) {
+      width: 10rem;
+    }
+  }
 
   &__card--img {
     img {
+      @include mediaQuery(520px) {
+        width: 15rem;
+        height: 5rem;
+      }
       width: 25rem;
       height: 10rem;
       object-fit: cover;
@@ -26,20 +40,26 @@
     }
   }
   &__card--txt {
+          @include mediaQuery(520px) {
+        width: 11rem;
+      }
     a {
       font-size: small;
       color: $clr--secondary;
-      &:hover{
+      &:hover {
         color: $clr--dark;
         transition: 0.2s all ease-in;
       }
     }
 
     p {
+            @include mediaQuery(520px) {
+        width: 12rem;
+      }
       font-size: 0.9rem;
       width: 24rem;
       margin-bottom: 3rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       a {
         color: $clr--light;
         text-decoration: underline;

@@ -74,6 +74,12 @@
 }
 
 .serviceBanner .prev {
+    @include mediaQuery(520px) {
+    position: relative;
+    left: 24.5rem;
+    bottom: 54.5rem;
+    font-size: 1.5rem;
+  }
   color: $clr--light;
   font-size: 2rem;
   position: relative;
