@@ -8,5 +8,4 @@ var slider = tns({
   navPosition: "bottom",
   controls: false,
   axis: "vertical",
-
 });

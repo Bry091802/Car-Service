@@ -72,7 +72,11 @@
 }
 
 .Price {
-  padding-bottom: 2rem;
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem 0rem;
+    }
+  }
   h2 {
     position: relative;
     font-size: 2.5rem;
@@ -131,13 +135,30 @@
     color: $clr--dark;
     margin-top: 1rem;
     line-height: 1.5rem;
+    @include mediaQuery(520px) {
+      max-width: 22rem;
+    }
   }
   &__wrapper {
     padding: 6rem 7rem;
     background-color: $clr--light;
     @include unevenGrid(1fr 2fr, 2rem);
+
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      display: grid;
+      padding: 0rem 0rem;
+      flex-direction: column;
+      padding: 4rem 2rem;
+    }
   }
   &__lists {
+    @include mediaQuery(520px) {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+    }
     margin-right: 5rem;
     display: flex;
     gap: 5rem;
@@ -148,6 +169,9 @@
       overflow: hidden;
     }
     a {
+      @include mediaQuery(520px) {
+        width: 23rem;
+      }
       font-size: 15px;
       width: 12.8rem;
       float: left;
