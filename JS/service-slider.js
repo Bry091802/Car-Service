@@ -8,4 +8,13 @@ var slider = tns({
   controlsContainer: "#controls",
   prevButton: ".prev",
   nextButton: ".next",
+  responsive: {
+    1250: {
+      items: 3,
+    },
+    200: {
+      items: 2,
+      gutter: 30,
+    },
+  },
 });

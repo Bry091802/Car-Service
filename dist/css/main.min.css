@@ -1645,6 +1645,11 @@ img {
   margin-left: -2rem;
 }
 
+@media screen and (max-width: 520px) {
+  .serviceBanner .container {
+    padding: 0rem;
+  }
+}
 .serviceBanner__wrapper {
   padding: 5rem 4rem;
 }
@@ -1659,12 +1664,28 @@ img {
   display: flex;
   margin-top: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .serviceBanner__card1 {
+    width: 10rem;
+  }
+}
 .serviceBanner__card--img img {
   width: 25rem;
   height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .serviceBanner__card--img img {
+    width: 15rem;
+    height: 5rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .serviceBanner__card--txt {
+    width: 11rem;
+  }
 }
 .serviceBanner__card--txt a {
   font-size: small;
@@ -1680,6 +1701,11 @@ img {
   margin-bottom: 3rem;
   margin-top: 0.5rem;
 }
+@media screen and (max-width: 520px) {
+  .serviceBanner__card--txt p {
+    width: 12rem;
+  }
+}
 .serviceBanner__card--txt p a {
   color: #fff;
   text-decoration: underline;
@@ -1688,8 +1714,10 @@ img {
   color: #f8565d;
 }
 
-.Price {
-  padding-bottom: 2rem;
+@media screen and (max-width: 520px) {
+  .Price .container {
+    padding: 0rem 0rem;
+  }
 }
 .Price h2 {
   position: relative;
@@ -1745,6 +1773,11 @@ img {
   margin-top: 1rem;
   line-height: 1.5rem;
 }
+@media screen and (max-width: 520px) {
+  .Price p {
+    max-width: 22rem;
+  }
+}
 .Price__wrapper {
   padding: 6rem 7rem;
   background-color: #fff;
@@ -1752,11 +1785,28 @@ img {
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .Price__wrapper {
+    grid-template-columns: 1fr;
+    display: grid;
+    padding: 0rem 0rem;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
 .Price__lists {
   margin-right: 5rem;
   display: flex;
   gap: 5rem;
   color: #26252a;
+}
+@media screen and (max-width: 520px) {
+  .Price__lists {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
 }
 .Price__lists em {
   background: url(../../img/elipsis.gif) repeat-x 0% 13px;
@@ -1769,6 +1819,11 @@ img {
   float: left;
   font-family: #f8565d;
 }
+@media screen and (max-width: 520px) {
+  .Price__lists a {
+    width: 23rem;
+  }
+}
 .Price__lists a:hover {
   color: #f8565d;
 }
@@ -1779,6 +1834,11 @@ img {
   padding-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 520px) {
+  .aboutBanner .container {
+    padding: 0;
+  }
+}
 .aboutBanner__wrapper h2 {
   font-size: 2.5rem;
   font-family: "Ubuntu Condensed", Arial, sans-serif;
@@ -1789,6 +1849,11 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__card {
+    grid-template-columns: 1fr;
+  }
 }
 .aboutBanner__feature {
   display: flex;
@@ -1814,12 +1879,26 @@ img {
   transition: 0.3s all ease-in;
 }
 
-.history {
-  padding: 2rem 9rem;
+@media screen and (max-width: 520px) {
+  .history {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .history .container {
+    padding: 0;
+  }
 }
 .history__wrapper {
   display: flex;
   gap: 3rem;
+  padding: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .history__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .history__card {
   max-width: 53.5rem;
@@ -1836,6 +1915,11 @@ img {
 .history__txt {
   width: 53rem;
 }
+@media screen and (max-width: 520px) {
+  .history__txt {
+    max-width: 100%;
+  }
+}
 .history__txt p {
   font-size: 0.9rem;
   margin-bottom: 2rem;
@@ -1845,6 +1929,11 @@ img {
 }
 .history__txt1 {
   width: 25rem;
+}
+@media screen and (max-width: 520px) {
+  .history__txt1 {
+    max-width: 100%;
+  }
 }
 .history__txt1 p {
   font-size: 0.9rem;
@@ -1857,6 +1946,11 @@ img {
   color: #26252a;
 }
 
+@media screen and (max-width: 520px) {
+  .team .container {
+    padding: 0;
+  }
+}
 .team h2 {
   color: #26252a;
   font-size: 2.5rem;
@@ -1869,6 +1963,12 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .team__wrapper--card {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 }
 .team__card--img img {
   width: 18rem;
@@ -2084,6 +2184,14 @@ img {
   position: relative;
   bottom: 53.5rem;
   left: 82rem;
+}
+@media screen and (max-width: 520px) {
+  .serviceBanner .prev, .serviceBanner .next {
+    position: relative;
+    left: 24.5rem;
+    bottom: 54.5rem;
+    font-size: 1.5rem;
+  }
 }
 .serviceBanner .prev:hover, .serviceBanner .next:hover {
   color: #26252a;

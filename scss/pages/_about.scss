@@ -2,6 +2,11 @@
 @use "../base/" as *;
 
 .aboutBanner {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
   &__wrapper {
     h2 {
       font-size: 2.5rem;
@@ -12,6 +17,9 @@
   }
   &__card {
     @include evenGrid(4, 3rem);
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__feature {
@@ -19,6 +27,7 @@
     display: flex;
     flex-direction: column;
     height: 22rem;
+
     &--title {
       h3 {
         font-size: 1.4rem;
@@ -43,10 +52,24 @@
 }
 
 .history {
-  padding: 2rem 9rem;
+  @include mediaQuery(520px) {
+    padding: 0;
+  }
+
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
+
   &__wrapper {
     display: flex;
     gap: 3rem;
+    padding: 5rem;
+    @include mediaQuery(520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__card {
     max-width: 53.5rem;
@@ -62,6 +85,10 @@
   }
   &__txt {
     width: 53rem;
+    @include mediaQuery(520px) {
+      max-width: 100%;
+    }
+
     p {
       font-size: 0.9rem;
       margin-bottom: 2rem;
@@ -72,9 +99,13 @@
   }
   &__txt1 {
     width: 25rem;
+    @include mediaQuery(520px) {
+      max-width: 100%;
+    }
     p {
       font-size: 0.9rem;
       margin-bottom: 2rem;
+
       a {
         color: rgba(255, 255, 255, 0.5);
         &:hover {
@@ -86,6 +117,11 @@
 }
 
 .team {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
   h2 {
     color: $clr--dark;
     font-size: 2.5rem;
@@ -96,6 +132,11 @@
   }
   &__wrapper--card {
     @include evenGrid(4, 2rem);
+
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
   }
   &__card--img {
     img {

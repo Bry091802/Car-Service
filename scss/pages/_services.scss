@@ -2,6 +2,11 @@
 @use "../base/" as *;
 
 .serviceBanner {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem;
+    }
+  }
   &__wrapper {
     padding: 5rem 4rem;
     h2 {
@@ -16,9 +21,18 @@
     display: flex;
     margin-top: 2rem;
   }
+  &__card1 {
+    @include mediaQuery(520px) {
+      width: 10rem;
+    }
+  }
 
   &__card--img {
     img {
+      @include mediaQuery(520px) {
+        width: 15rem;
+        height: 5rem;
+      }
       width: 25rem;
       height: 10rem;
       object-fit: cover;
@@ -26,20 +40,26 @@
     }
   }
   &__card--txt {
+          @include mediaQuery(520px) {
+        width: 11rem;
+      }
     a {
       font-size: small;
       color: $clr--secondary;
-      &:hover{
+      &:hover {
         color: $clr--dark;
         transition: 0.2s all ease-in;
       }
     }
 
     p {
+            @include mediaQuery(520px) {
+        width: 12rem;
+      }
       font-size: 0.9rem;
       width: 24rem;
       margin-bottom: 3rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       a {
         color: $clr--light;
         text-decoration: underline;
@@ -52,7 +72,11 @@
 }
 
 .Price {
-  padding-bottom: 2rem;
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem 0rem;
+    }
+  }
   h2 {
     position: relative;
     font-size: 2.5rem;
@@ -111,13 +135,30 @@
     color: $clr--dark;
     margin-top: 1rem;
     line-height: 1.5rem;
+    @include mediaQuery(520px) {
+      max-width: 22rem;
+    }
   }
   &__wrapper {
     padding: 6rem 7rem;
     background-color: $clr--light;
     @include unevenGrid(1fr 2fr, 2rem);
+
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      display: grid;
+      padding: 0rem 0rem;
+      flex-direction: column;
+      padding: 4rem 2rem;
+    }
   }
   &__lists {
+    @include mediaQuery(520px) {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+    }
     margin-right: 5rem;
     display: flex;
     gap: 5rem;
@@ -128,6 +169,9 @@
       overflow: hidden;
     }
     a {
+      @include mediaQuery(520px) {
+        width: 23rem;
+      }
       font-size: 15px;
       width: 12.8rem;
       float: left;
